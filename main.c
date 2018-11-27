@@ -9,11 +9,10 @@ typedef struct book{
     person T[10];
 }book;
 int main () {
-//KOD ZDEFINIOWANIA KSIĄŻKI I ZAINICJOWANIA PIERWSZEGO ELEMENTU TABLICY
+
   int operacja = 0;
   int indeks;
   book ks_tel={1,{{"Jan","Kowalski",123456789}}};
-  //ks_tel.count++;
   do {
     printf("Co mam zrobić? (1 - wypisanie, 2 - dodawanie, 3 - usuwanie,  0 - koniec)\n");
 
@@ -28,7 +27,7 @@ int main () {
 
           case 1:
 
-    //KOD WYPISYWANIA
+    //Print
             for(int i=0;i<ks_tel.count;i++)
             {
                 printf("%i,%s,%s,%ld\n",i+1, ks_tel.T[i].imie,ks_tel.T[i].nazwisko,ks_tel.T[i].telefon);
@@ -36,7 +35,7 @@ int main () {
             break;
           case 2:
 
-    //KOD DODAWANIA
+    //ADD
             printf("podaj imie,nazwisko,telefon: ");
             if(ks_tel.count>=10)
             {
@@ -51,7 +50,7 @@ int main () {
 
           case 3:
 
-    //KOD USUWANIA
+    //Delete
             printf ("podaj numer indeks osoby ktora chcesz usunac");
             scanf("%i",&indeks);
             for(int i=0;i<=indeks;i++)
